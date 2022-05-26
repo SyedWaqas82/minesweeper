@@ -1,24 +1,20 @@
-# README
+# Minesweeper
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Setup
 
-Things you may want to cover:
+Install the app dependencies:
 
-* Ruby version
+```
+bundle install
+rails db:setup
+rails webpacker:install
+rails webpacker:install:react
+```
 
-* System dependencies
+## Tests
 
-* Configuration
+To run all tests:
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+bundle exec rspec
+```

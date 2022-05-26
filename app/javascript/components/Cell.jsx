@@ -4,7 +4,6 @@ function Cell({cellIndex, cell, onDiscoverLineCell}) {
 
     const unDiscoveredStyle = {minWidth:'50px', height: '50px', paddingTop: '10px', paddingBottom: '10px', textAlign: 'center', backgroundColor: 'Gray', border: '1px', borderStyle:'solid', borderColor:'Black'};
     const discoveredStyle = {minWidth:'50px', height: '50px', paddingTop: '10px', paddingBottom: '10px', textAlign: 'center', backgroundColor: 'LightGray', border: '1px', borderStyle:'solid', borderColor:'Black'};
-    console.log(cell);
 
     let cellText = ""
 

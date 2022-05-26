@@ -2,8 +2,6 @@ import React from 'react'
 import Cell from './Cell';
 
 function Line({lineIndex, cells, onDiscoverCell}) {
-    //console.log(lineIndex);
-    console.log(cells);
 
     function discoverLineCellHandler(cellIndex, isFlag)
     {

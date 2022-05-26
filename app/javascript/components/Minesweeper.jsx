@@ -13,7 +13,7 @@ export default function Minesweeper() {
 
   function newGameHandler(difficulty)
   {
-    let gameParam = {width: 3, height: 3, bombs_count: 1 };
+    let gameParam = {width: 9, height: 9, bombs_count: 10 };
 
     if(difficulty == "Expert")
     {
