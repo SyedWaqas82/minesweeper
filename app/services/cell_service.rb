@@ -1,8 +1,9 @@
 class CellService
   def discover(line, col, board)
     return if not validate_discover(line, col, board)
-    return if board.lines[line].cells[col].bomb
+    #return if board.lines[line].cells[col].bomb
 
+    puts board.lines[line].cells[col].as_json
     board.lines[line].cells[col].discovered = true
 
     return if board.lines[line].cells[col].close_bombs != 0

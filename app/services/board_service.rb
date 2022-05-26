@@ -35,7 +35,7 @@ class BoardService
     if hit_bomb?(line, column, board)
       board.playing = false
       board.save!
-      raise 'Hit a bomb'
+      #raise 'Hit a bomb'
     end
 
     @cell_svc.discover(line, column, board)

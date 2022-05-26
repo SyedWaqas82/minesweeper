@@ -63,6 +63,27 @@ class BoardsController < ActionController::API
     @board.destroy
   end
 
+   # GET /leaderboard
+   def leaderboard
+    topscorers = Leaderboard.order("clicks, time").take(10);
+    render json: topscorers, status: :ok
+  end
+
+  #POST /leaderboard
+  def newscore
+    begin
+      newscore = Leaderboard.new(newscore_params)
+
+      if newscore.save
+        render json: newscore, status: :created
+      else
+        render json: newscore.errors, status: :unprocessable_entity
+      end
+    rescue Exception => e
+      render json: e, status: :unprocessable_entity
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_board
@@ -72,5 +93,9 @@ class BoardsController < ActionController::API
     # Only allow a trusted parameter "white list" through.
     def board_params
       params.require(:board).permit(:height, :width, :bombs_count)
+    end
+
+    def newscore_params
+      params.permit(:name, :clicks, :time)
     end
 end

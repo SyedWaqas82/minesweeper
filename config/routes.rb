@@ -11,4 +11,6 @@ Rails.application.routes.draw do
   get '/status'   => 'boards#playing'
   patch '/play'   => 'boards#play'
   patch '/flag'   => 'boards#flag'
+  get '/leaderboard'   => 'boards#leaderboard'
+  post '/leaderboard'   => 'boards#newscore'
 end
