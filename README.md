@@ -6,7 +6,8 @@ Install the app dependencies:
 
 ```
 bundle install
-rails db:setup
+rails db:create
+rails db:migrate
 rails webpacker:install
 rails webpacker:install:react
 ```
@@ -16,5 +17,8 @@ rails webpacker:install:react
 To run all tests:
 
 ```
-bundle exec rspec
+rails db:test:prepare
+rails db:migrate RAILS_ENV=test
+rails test
+rails test:system
 ```

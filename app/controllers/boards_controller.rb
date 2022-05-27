@@ -59,9 +59,9 @@ class BoardsController < ActionController::API
   end
 
   # DELETE /board/1
-  def destroy
-    @board.destroy
-  end
+  # def destroy
+  #   @board.destroy
+  # end
 
    # GET /leaderboard
    def leaderboard

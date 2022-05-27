@@ -1,0 +1,7 @@
+invalid:
+  playing: false
+
+valid:
+  height: 9
+  width: 9
+  bombs_count: 10

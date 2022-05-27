@@ -1,11 +1,9 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
+valid:
   name: MyString
   clicks: 1
   time: 1
 
-two:
+invalid:
   name: MyString
-  clicks: 1
-  time: 1
